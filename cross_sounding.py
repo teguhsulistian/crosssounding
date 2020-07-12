@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from scipy.spatial import distance
 
 file = 'MALUKU_PERUM.csv'
 
@@ -11,6 +12,11 @@ data = data.drop(["date", "time"], axis=1)
 data["datetime"] = pd.to_datetime(data["datetime"], dayfirst=True)
 
 #Find Closest Point
-data_x= data["x"]
-data_x= data["y"]
+data_xy = data[['x','y']].to_numpy()
 
+# def closest_node(table1, table2):
+#     closest_index = distance.cdist([table1], table2).argmin()
+#     return table2[closest_index]
+
+# closest_node(data_xy, data_xy)
+# #print(data_xy[1])
