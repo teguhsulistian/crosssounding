@@ -12,7 +12,10 @@ data = data.drop(["date", "time"], axis=1)
 data["datetime"] = pd.to_datetime(data["datetime"], dayfirst=True)
 
 #Find Closest Point
-data_xy = data[['x','y']].to_numpy()
+data_all = data[['x','y','z','datetime']].to_numpy()
+
+data_len = len(data_all)
+
 
 # def closest_node(table1, table2):
 #     closest_index = distance.cdist([table1], table2).argmin()
