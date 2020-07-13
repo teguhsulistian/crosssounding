@@ -15,6 +15,16 @@ data["datetime"] = pd.to_datetime(data["datetime"], dayfirst=True)
 data_all = data[['x','y','z','datetime']].to_numpy()
 
 data_len = len(data_all)
+for i in range(data_len):
+    cross_x = data_all[i,0]
+    cross_y = data_all[i,1]
+    
+      
+            
+            
+            
+# time_diff_list.append(time_diff_1)
+
 
 
 # def closest_node(table1, table2):
